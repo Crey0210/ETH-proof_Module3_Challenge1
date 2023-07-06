@@ -1,0 +1,16 @@
+// SPDX-License-Identifier: MIT
+pragma solidity 0.8.9;
+
+contract EtherValueConverter {
+    function getValueInWei() external payable returns (uint256) {
+        return msg.value;
+    }
+
+    function getValueInEther() external payable returns (uint256) {
+        return msg.value / 1 ether;
+    }
+
+    function getValueInGwei() external payable returns (uint256) {
+        return msg.value / 1 gwei;
+    }
+}
