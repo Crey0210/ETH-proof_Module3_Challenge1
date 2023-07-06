@@ -1,0 +1,33 @@
+// SPDX-License-Identifier: MIT
+pragma solidity >=0.8.9;
+
+contract Storage {
+    
+    uint id;
+    string name;
+    int number;
+    bool adult;
+
+
+    // takes a value _number and assigns it to the state variable number
+    function setInfo(uint _id, string memory _name, int _number, bool _18Plus) public {
+          id = _id;
+          name = _name;
+          number = _number;
+          adult = _18Plus;
+    }
+
+    // returns the value of the state variable number
+    function getID() public view returns (uint) {
+        return id;
+    }
+    function getName() public view returns (string memory) {
+        return name;
+    }
+    function getNumber() public view returns (int) {
+        return number;
+    }
+    function getAge() public view returns (bool) {
+        return adult;
+    }
+ }
